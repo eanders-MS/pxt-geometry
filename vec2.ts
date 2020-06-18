@@ -22,6 +22,14 @@ namespace geometry {
             return new Vector2(Fx.mul(this.x, s), Fx.mul(this.y, s));
         }
 
+        public static Zero(): Vector2 {
+            return new Vector2(Fx.zeroFx8, Fx.zeroFx8);
+        }
+
+        public static One(): Vector2 {
+            return new Vector2(Fx.oneFx8, Fx.oneFx8);
+        }
+
         public static Add(a: Vector2, b: Vector2): Vector2 {
             return new Vector2(Fx.add(a.x, b.x), Fx.add(a.y, b.y));
         }
@@ -40,6 +48,10 @@ namespace geometry {
 
         public static Scale(v: Vector2, s: Fx8): Vector2 {
             return v.scaled(s);
+        }
+
+        public static Magnitude(v: Vector2): Fx8 {
+            return v.magnitude();
         }
     }
 }

@@ -1,14 +1,19 @@
 {
     "name": "pxt-geometry",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "pxt-trig": "github:eanders-ms/pxt-trig#164504a483ad7ae336596f0f7e804e6d0b7489a8"
     },
     "description": "",
     "files": [
         "main.blocks",
         "main.ts",
         "README.md",
-        "vec2.ts"
+        "vec2.ts",
+        "vec3.ts",
+        "vec4.ts",
+        "mat4.ts",
+        "mat2.ts"
     ],
     "preferredEditor": "tsprj",
     "testFiles": [

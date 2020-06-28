@@ -1,4 +1,4 @@
-namespace geometry {
+namespace geom {
     export class Vector2 {
         public x: Fx8;
         public y: Fx8;
@@ -22,12 +22,24 @@ namespace geometry {
             return new Vector2(Fx.mul(this.x, s), Fx.mul(this.y, s));
         }
 
+        public static FromNumbers(x: number, y: number): Vector2 {
+            return new Vector2(Fx8(x), Fx8(y));
+        }
+
         public static Zero(): Vector2 {
             return new Vector2(Fx.zeroFx8, Fx.zeroFx8);
         }
 
         public static One(): Vector2 {
             return new Vector2(Fx.oneFx8, Fx.oneFx8);
+        }
+
+        public static X(): Vector2 {
+            return new Vector2(Fx.oneFx8, Fx.zeroFx8);
+        }
+
+        public static Y(): Vector2 {
+            return new Vector2(Fx.zeroFx8, Fx.oneFx8);
         }
 
         public static Add(a: Vector2, b: Vector2): Vector2 {

@@ -12,6 +12,10 @@ namespace geom {
             this.w = w;
         }
 
+        public dup(): Vector4 {
+            return new Vector4(this.x, this.y, this.z, this.w);
+        }
+
         public toVector3(): Vector3 {
             return new Vector3(this.x, this.y, this.z);
         }

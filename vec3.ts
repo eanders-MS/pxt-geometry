@@ -10,6 +10,10 @@ namespace geom {
             this.z = z;
         }
 
+        public dup(): Vector3 {
+            return new Vector3(this.x, this.y, this.z);
+        }
+
         public magnitude(): Fx8 {
             // TODO: Don't convert to float. Keep in fixed point.
             return Fx8(Math.sqrt(Fx.toFloat(Vector3.Dot(this, this))));

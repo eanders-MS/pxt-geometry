@@ -2,8 +2,24 @@ namespace geom {
     export class Matrix2x2 {
         public data: Fx8[][];
 
+        public get a() { return this.data[0][0]; }
+        public get b() { return this.data[0][1]; }
+        public get c() { return this.data[1][0]; }
+        public get d() { return this.data[1][1]; }
+
+        public set a(value) { this.data[0][0] = value; }
+        public set b(value) { this.data[0][1] = value; }
+        public set c(value) { this.data[1][0] = value; }
+        public set d(value) { this.data[1][1] = value; }
+
         constructor(data: Fx8[][]) {
             this.data = data;
+        }
+
+        public dup(): Matrix2x2 {
+            return new Matrix2x2([
+                [this.a, this.b],
+                [this.c, this.d]]);
         }
 
         public static Identity(): Matrix2x2 {

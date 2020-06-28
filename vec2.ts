@@ -8,6 +8,10 @@ namespace geom {
             this.y = y;
         }
 
+        public dup(): Vector2 {
+            return new Vector2(this.x, this.y);
+        }
+
         public magnitude(): Fx8 {
             // TODO: Don't convert to float. Keep in fixed point.
             return Fx8(Math.sqrt(Fx.toFloat(Vector2.Dot(this, this))));

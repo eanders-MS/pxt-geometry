@@ -26,6 +26,10 @@ namespace geom {
             return new Vector2(Fx.mul(this.x, s), Fx.mul(this.y, s));
         }
 
+        public scaledNumber(s: number): Vector2 {
+            return this.scaled(Fx8(s));
+        }
+
         public static FromNumbers(x: number, y: number): Vector2 {
             return new Vector2(Fx8(x), Fx8(y));
         }
@@ -64,6 +68,10 @@ namespace geom {
 
         public static Scale(v: Vector2, s: Fx8): Vector2 {
             return v.scaled(s);
+        }
+
+        public static ScaleNumber(v: Vector2, s: number): Vector2 {
+            return v.scaledNumber(s);
         }
 
         public static Magnitude(v: Vector2): Fx8 {

@@ -28,6 +28,10 @@ namespace geom {
             return new Vector3(Fx.mul(this.x, s), Fx.mul(this.y, s), Fx.mul(this.z, s));
         }
 
+        public scaledNumber(s: number): Vector3 {
+            return this.scaled(Fx8(s));
+        }
+
         public toVector4(): Vector4 {
             return new Vector4(this.x, this.y, this.z, Fx.oneFx8);
         }
@@ -83,8 +87,12 @@ namespace geom {
             return vec.normal();
         }
 
-        public static Scale(k: Fx8, vec: Vector3): Vector3 {
-            return vec.scaled(k);
+        public static Scale(vec: Vector3, s: Fx8): Vector3 {
+            return vec.scaled(s);
+        }
+
+        public static ScaleNumber(vec: Vector3, s: number): Vector3 {
+            return vec.scaledNumber(s);
         }
 
         public static Abs(vec: Vector3): Vector3 {

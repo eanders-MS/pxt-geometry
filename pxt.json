@@ -1,10 +1,10 @@
 {
     "name": "pxt-geometry",
+    "description": "",
     "dependencies": {
         "device": "*",
-        "pxt-trig": "github:eanders-ms/pxt-trig#164504a483ad7ae336596f0f7e804e6d0b7489a8"
+        "pxt-trig": "github:eanders-ms/pxt-trig#65fbb2f976d173799dce026c5b7a9a0f814039ee"
     },
-    "description": "",
     "files": [
         "main.blocks",
         "main.ts",
@@ -15,8 +15,15 @@
         "mat4.ts",
         "mat2.ts"
     ],
-    "preferredEditor": "tsprj",
     "testFiles": [
         "test.ts"
-    ]
+    ],
+    "targetVersions": {
+        "target": "1.0.16",
+        "targetId": "arcade"
+    },
+    "supportedTargets": [
+        "arcade"
+    ],
+    "preferredEditor": "tsprj"
 }
